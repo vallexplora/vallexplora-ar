@@ -9,12 +9,12 @@ public class PrefabScript : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI arText;
 
-    private string instructions = "Scan the Vallexplora logo to reveal the information.";
+    private string instructions = "Haz clic para comenzar a aprender sobre este lugar. :D";
 
-    private int TEXT_CHUNK_SIZE = 70;
+    private int TEXT_CHUNK_SIZE = 80;
 
     private int textIndex = 0;
-    private string comingText = "In Valle del Cauca, Colombia, vibrant salsa rhythms meet breathtaking landscapes. ⛰️ Experience the \"World's Salsa Capital\" in Cali, then venture into the Andes for coffee plantations and charming towns. ☕ Relax on Pacific beaches, explore lush rainforests, or spot exotic birds in Farallones National Park.  Unwind in hot springs or discover ancient treasures at the Calima Gold Museum. ♨️ Valle del Cauca offers something for everyone.";
+    private string comingText = "In Valle del Cauca, Colombia, vibrant salsa rhythms meet breathtaking landscapes. Experience the \"World's Salsa Capital\" in Cali, then venture into the Andes for coffee plantations and charming towns. ☕ Relax on Pacific beaches, explore lush rainforests, or spot exotic birds in Farallones National Park.  Unwind in hot springs or discover ancient treasures at the Calima Gold Museum. ♨️ Valle del Cauca offers something for everyone.";
     List<string> arParagraphs = new List<string>();
 
     public void TrimText()
@@ -42,6 +42,11 @@ public class PrefabScript : MonoBehaviour
         }
     }
 
+    public void SetComingText(string text)
+    {
+        comingText = text;
+    }
+
     public void ButtonChangeAction()
     {
         Debug.Log("Se está haciendo clic");
@@ -56,11 +61,5 @@ public class PrefabScript : MonoBehaviour
     {
         arText.text = instructions;
         TrimText();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

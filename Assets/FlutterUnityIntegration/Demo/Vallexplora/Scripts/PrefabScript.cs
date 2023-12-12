@@ -1,3 +1,4 @@
+using FlutterUnityIntegration;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -46,6 +47,9 @@ public class PrefabScript : MonoBehaviour
     {
         comingText = text;
         TrimText();
+        UnityMessageManager.Instance.SendMessageToFlutter(comingText);
+        UnityMessageManager.Instance.SendMessageToFlutter(text);
+
     }
 
     public void ButtonChangeAction()

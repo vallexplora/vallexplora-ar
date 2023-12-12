@@ -648,6 +648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8866692399219845561}
   - component: {fileID: 8866692399219845560}
+  - component: {fileID: 1251504423499102844}
   m_Layer: 0
   m_Name: TextController
   m_TagString: Untagged
@@ -683,6 +684,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arText: {fileID: 8866692397546026951}
+--- !u!114 &1251504423499102844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8866692399219845566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f0d555a552e429a9e36a2bec4c1faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8866692399387972405
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,11 +45,11 @@ public class PrefabScript : MonoBehaviour
     public void SetComingText(string text)
     {
         comingText = text;
+        TrimText();
     }
 
     public void ButtonChangeAction()
     {
-        Debug.Log("Se está haciendo clic");
         if (arParagraphs.Count > 0)
         {
             arText.text = arParagraphs[textIndex];
@@ -59,7 +59,11 @@ public class PrefabScript : MonoBehaviour
 
     public void Start()
     {
-        arText.text = instructions;
+        if (Screen.fullScreen)
+        {
+            Screen.fullScreen = false;
+        }
         TrimText();
+        arText.text = instructions;
     }
 }
